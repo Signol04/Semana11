@@ -7,15 +7,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class DatabaseLoader implements CommandLineRunner {
 
-	private final EmployeeRepository repository;
+	private final InstrumentoRepository repository;
 
 	@Autowired
-	public DatabaseLoader(EmployeeRepository repository) {
+	public DatabaseLoader(InstrumentoRepository repository) {
 		this.repository = repository;
 	}
 
 	@Override
 	public void run(String... strings) throws Exception {
-		this.repository.save(new Employee("Frodo", "Baggins", "ring bearer"));
+		this.repository.save(new Instrumento("Guitarra", "Cuerda", "de madera con resonancia"));
+		this.repository.save(new Instrumento("Ukelele", "Cuerda", "de madera con resonancia"));
+		this.repository.save(new Instrumento("Mélodica", "Viento", "teclado pequeño"));
 	}
 }
