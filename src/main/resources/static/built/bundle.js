@@ -34105,7 +34105,7 @@ var App = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, App);
     _this = _super.call(this, props);
     _this.state = {
-      employees: []
+      instrumentos: []
     };
     return _this;
   }
@@ -34115,58 +34115,58 @@ var App = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
       client({
         method: 'GET',
-        path: '/api/employees'
+        path: '/api/instrumentos'
       }).done(function (response) {
         _this2.setState({
-          employees: response.entity._embedded.employees
+          instrumentos: response.entity._embedded.instrumentos
         });
       });
     }
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement(EmployeeList, {
-        employees: this.state.employees
+      return /*#__PURE__*/React.createElement(InstrumentoList, {
+        instrumentos: this.state.instrumentos
       });
     }
   }]);
   return App;
 }(React.Component);
-var EmployeeList = /*#__PURE__*/function (_React$Component2) {
-  _inherits(EmployeeList, _React$Component2);
-  var _super2 = _createSuper(EmployeeList);
-  function EmployeeList() {
-    _classCallCheck(this, EmployeeList);
+var InstrumentoList = /*#__PURE__*/function (_React$Component2) {
+  _inherits(InstrumentoList, _React$Component2);
+  var _super2 = _createSuper(InstrumentoList);
+  function InstrumentoList() {
+    _classCallCheck(this, InstrumentoList);
     return _super2.apply(this, arguments);
   }
-  _createClass(EmployeeList, [{
+  _createClass(InstrumentoList, [{
     key: "render",
     value: function render() {
-      var employees = this.props.employees.map(function (employee) {
-        return /*#__PURE__*/React.createElement(Employee, {
-          key: employee._links.self.href,
-          employee: employee
+      var instrumentos = this.props.instrumentos.map(function (instrumento) {
+        return /*#__PURE__*/React.createElement(Instrumento, {
+          key: instrumento._links.self.href,
+          instrumento: instrumento
         });
       });
-      return /*#__PURE__*/React.createElement("table", null, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "First Name"), /*#__PURE__*/React.createElement("th", null, "Last Name"), /*#__PURE__*/React.createElement("th", null, "Description")), employees));
+      return /*#__PURE__*/React.createElement("table", null, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Nombre"), /*#__PURE__*/React.createElement("th", null, "Categoria"), /*#__PURE__*/React.createElement("th", null, "Descripcion")), instrumentos));
     }
   }]);
-  return EmployeeList;
+  return InstrumentoList;
 }(React.Component);
-var Employee = /*#__PURE__*/function (_React$Component3) {
-  _inherits(Employee, _React$Component3);
-  var _super3 = _createSuper(Employee);
-  function Employee() {
-    _classCallCheck(this, Employee);
+var Instrumento = /*#__PURE__*/function (_React$Component3) {
+  _inherits(Instrumento, _React$Component3);
+  var _super3 = _createSuper(Instrumento);
+  function Instrumento() {
+    _classCallCheck(this, Instrumento);
     return _super3.apply(this, arguments);
   }
-  _createClass(Employee, [{
+  _createClass(Instrumento, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.employee.firstName), /*#__PURE__*/React.createElement("td", null, this.props.employee.lastName), /*#__PURE__*/React.createElement("td", null, this.props.employee.description));
+      return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.instrumento.firstName), /*#__PURE__*/React.createElement("td", null, this.props.instrumento.lastName), /*#__PURE__*/React.createElement("td", null, this.props.instrumento.description));
     }
   }]);
-  return Employee;
+  return Instrumento;
 }(React.Component);
 ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('react'));
 

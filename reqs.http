@@ -7,7 +7,7 @@ POST {{emp}}
 Content-Type: application/json
 
 {
-    "firstName": "Barney",
-    "lastName": "Dinosaurio",
-    "description": "Barney el Dinosaurio"
+    "firstName": "Quena",
+    "lastName": "Viento",
+    "description": "Tubo con huequitos"
 }
