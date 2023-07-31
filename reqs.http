@@ -1,4 +1,4 @@
-@server = https://texai-crispy-enigma-j4q5xwg7735p95-8080.preview.app.github.dev
+@server = https://signol04-fictional-umbrella-56pwjx4r4w7f4qrw-8080.preview.app.github.dev
 @emp = {{server}}/api/employees
 ###
 GET {{emp}}
@@ -7,7 +7,7 @@ POST {{emp}}
 Content-Type: application/json
 
 {
-    "firstName": "Bilbo",
-    "lastName": "Baggins",
-    "description": "burglar"
+    "firstName": "Barney",
+    "lastName": "Dinosaurio",
+    "description": "Barney el Dinosaurio"
 }
